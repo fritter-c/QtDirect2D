@@ -4,7 +4,6 @@
 #include <d2d1_1.h>
 #include <qglobal.h>
 #include <wrl.h>
-#include "paint.h"
 #include "qpaintengine.h"
 #include "qpainter.h"
 #include "src/direct2d/direct2ddevicecontext.h"

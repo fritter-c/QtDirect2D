@@ -4,12 +4,13 @@
 #include <QVarLengthArray>
 #include "direct2dqthelper.h"
 #include "directcontext.h"
-#include "os.h"
 #include "qpainterpath.h"
 #include <comdef.h>
 #include <dwrite.h>
 #include <qglobal.h>
 #include <wingdi.h>
+
+#define UNUSED(A) void(A)
 
 ComPtr<ID2D1Bitmap> Direct2DPaintEngine::QPixmapToD2D1Bitmap(const QPixmap& pixmap)
 {
@@ -704,7 +705,7 @@ void Direct2DPaintEngine::drawLinePath(const QPointF* path, const size_t count)
 
 QPaintEngine::Type Direct2DPaintEngine::type() const
 {
-	return GTRDirect2D;
+	return User;
 }
 
 void Direct2DPaintEngine::drawEllipse(const QRectF& rect)
